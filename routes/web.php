@@ -19,4 +19,3 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'ProfilesController@index')->name('profile.show');
