@@ -11,7 +11,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController@index');
+//Route::get('/test', 'HomeController@test')->middleware('age');
+//Route::prefix('admin')->middleware('age')->group(function (){
+//
+//});
 
 Auth::routes();
 
-Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
+Route::get('/home', 'ProfilesController@index')->name('profile.show');

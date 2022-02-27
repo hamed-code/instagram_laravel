@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Profile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,6 +11,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function profile()
+    {
+       return $this->hasOne('App\Profile');
+    }
     /**
      * The attributes that are mass assignable.
      *

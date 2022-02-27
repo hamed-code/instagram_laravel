@@ -13,9 +13,9 @@
                 <div class="pr-3"><strong>25k</strong> followers</div>
                 <div class="pr-3"><strong>266</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">freeCodeCamp.org</div>
-            <div>Lorem ipsum dolor sit amet, consectetnt quaerat quidem, saepe sit, unde.</div>
-            <div><a href="#">www.instagram.com</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 
