@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/p', 'PostController@create');
+
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');

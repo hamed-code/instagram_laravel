@@ -7,15 +7,18 @@
             <img src="https://matplotlib.org/stable/_images/stinkbug.png" style="height: 160px" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>{{ $user->username }}</h1></div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex">
                 <div class="pr-3"><strong>153</strong> posts</div>
                 <div class="pr-3"><strong>25k</strong> followers</div>
                 <div class="pr-3"><strong>266</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">freeCodeCamp.org</div>
-            <div>Lorem ipsum dolor sit amet, consectetnt quaerat quidem, saepe sit, unde.</div>
-            <div><a href="#">www.instagram.com</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 
